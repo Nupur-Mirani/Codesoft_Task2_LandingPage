@@ -1,0 +1,164 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+outline: none;
+border: none;
+text-decoration: none;
+text-transform: capitalize;
+transition: .2s linear;
+}
+html{
+font-size: 62.5%;
+scroll-behavior: smooth;
+scroll-padding-top: 6rem;
+overflow: hidden;
+}
+section{
+    padding: 2rem 9%;
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+.btn:hover{
+   background-color: palevioletred;
+}
+header{
+    position: fixed;
+    top:0;left:0;right: 0;
+    background:#F1E4F3 ;
+    padding: 2rem 9%;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+box-shadow: 0.5rem 1rem rgba(0,0,0,.1);
+}
+.logo{
+font-size: 3rem;
+color: #333;
+font-weight: bolder;
+}
+.logo span{
+    color: orange;
+}
+nav a{
+font-size: 2rem;
+padding: 0 1.5rem;
+color:#666;
+}
+nav a:hover{
+    color: #E3655B;
+}
+.icons a{
+    font-size: 2.5rem;
+    color: #666;
+    margin-left: 1.5rem;
+}
+.icons a:hover{
+   color: #E3655B; 
+}
+#toggler{
+    display: none;
+}
+.fa-bars{
+    font-size: 3rem;
+    color:#333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem ;
+    cursor: pointer;
+    border: 1rem solid rgba(0,0,0,.3);
+    display: none;
+}
+.home{
+    display: flex;
+    align-items:center ;
+    min-height: 100vh;
+    background: url(https://images.unsplash.com/photo-1431263154979-0982327fccbb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Zmxvd2VyfGVufDB8MHwwfHx8Mg%3D%3D)no-repeat;
+background-size: cover;
+background-position: center;
+}
+
+.home .content{
+    max-width: 50rem;
+}
+.home .content h3{
+    font-size: 6rem;
+    color: #333;
+padding: 1rem 0;
+line-height: 1.5;
+}
+.home .content span{
+    font-size: 3.5rem;
+    color: palevioletred;
+    padding: 1rem 0;
+line-height: 1.5;
+}
+.home .content p{
+    font-size: 1.5rem;
+    color: #32322C;
+    padding: 1rem 0;
+line-height: 1.5;
+}
+
+@media(max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 2rem;
+    }
+    section{
+        padding: 2rem;
+    }
+    .home{
+       background-position: left; 
+    }
+}
+
+@media(max-width: 768px){
+    header .fa-bars{
+        display: block;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #eee;
+        border-top:.1rem solid rgba(0,0,0,.1) ;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header #toggler:checked ~ nav{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    header nav a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #F1E4F3;
+        border: .1rem solid rgba(0,0,0,.1);
+        display: block;
+    }
+    .home .content h3{
+        font-size:5rem ;
+    }
+    .home .content span{
+        font-size:2.5rem ;
+    }
+
+
+}
+@media(max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+   
+}
+
+
+
